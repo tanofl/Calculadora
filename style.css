@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Math&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Noto Sans Math', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-family: 'Noto Sans Math', sans-serif;
+}
+
+.flexVertically {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: auto;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.calculator {
+    background-color: #f7faff;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 8px 8px 15px #0087F324, -10px -10px 15px #ffffff;
+    max-width: 365px;
+}
+
+.mainGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    grid-auto-rows: 70px;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+}
+
+.display {
+    text-align: right;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.display:focus{
+    outline: #00C9A7 1px solid;
+}
+
+#subDisplay {
+    font-size: 1em;
+    margin: 15px 15px 0;
+    color: rgba(0, 0, 0, 0.5);
+    height: 20px;
+    overflow: hidden;
+}
+
+#mainDisplay {
+    font-size: 2em;
+    margin: 5px 15px 15px;
+    color: #0087F3;
+    overflow: hidden;
+}
+
+.button {
+    background-color: #F9FBFF;
+    border: 1px solid #0086f318;
+    border-radius: 20px;
+    font-size: 1.5em;
+    color: #0087F3;
+    cursor: pointer;
+    box-shadow: 8px 8px 15px #0087F324, -10px -10px 15px #ffffff;
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+.number {
+    font-size: 1.5em;
+    color: black;
+}
+
+.history {
+    background-color: #f7faff;
+    width: 365px;
+    max-width: 55px;
+    max-height: 55px;
+    overflow: hidden;
+    margin: 0 25px;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 8px 8px 15px #0087F324, -10px -10px 15px #ffffff;
+    transition: all 0.2s ease-in;
+}
+
+#iconHistory {
+    height: 55px;
+    width: 55px;
+    padding: 15px;
+    filter: invert(39%) sepia(20%) saturate(6822%) hue-rotate(187deg) brightness(96%) contrast(102%);
+}
+
+.historyTitle {
+    margin: 5px auto 10px;
+    font-size: 2em;
+    color: #0087F3;
+    left: -25px;
+    position: relative;
+}
+
+.historyContent {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+p{
+    margin: 5px 0 5px 15px;
+}
+
+sup {
+    font-size: 60%;
+}
+
+.help {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+    left: -10px;
+    position: absolute;
+    width: 100%;
+    margin-left: auto;
+}
+
+.helpText {
+    margin: 5px 10px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    margin: 0px 5px;
+}
+
+  /* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position tooltip text*/
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -100px;
+    z-index: 1;
+}
+
+  /* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    
+}
+
+  /* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+  /* slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+  /* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+h3 {
+    margin: 30px 0 0 0;
+}

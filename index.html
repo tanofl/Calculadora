@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Calculadora</title>
+		<link rel="stylesheet" href="style.css"/>
+		<script defer src="main.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"></script>
+	</head>
+	<body>
+		<div class="help">
+			<div class="tooltip">?
+				<p class="tooltiptext">Con el modo ayuda activado flota sobre las funciones para descubir una explicacion sobre el mismo</p>
+			</div>
+			
+			<p class="helpText">Modo Ayuda</p>
+			
+			<label class="switch">
+				<input type="checkbox" id="helpMode">
+				<span class="slider round"></span>
+			</label>
+			
+		</div>
+		<div class="flexVertically">
+			<div class="container">
+				<div class="calculator">
+					<div class="display">
+						<p id="subDisplay"></p>
+						<p id="mainDisplay">0</p>
+					</div>
+					<div class="mainGrid">
+						<button class="button operation" id="pi">π</button>
+						<button class="button operation" id="sqrt"><sup>2</sup>√𝒙</button>
+						<button class="button operation" id="log10">log</button>
+						<button class="button operation" id="ln">ln</button>
+
+						<button class="button operation" id="divide">÷</button>
+						<button class="button operation" id="power">𝒙<sup> 𝒚</sup></button>
+						<button class="button operation" id="CE">CE</button>
+						<button class="button operation" id="C">C</button>
+
+						<button class="button number" id="num7">7</button>
+						<button class="button number" id="num8">8</button>
+						<button class="button number" id="num9">9</button>
+						<button class="button operation" id="multiply">×</button>
+
+						<button class="button number" id="num4">4</button>
+						<button class="button number" id="num5">5</button>
+						<button class="button number" id="num6">6</button>
+						<button class="button operation" id="substract">-</button>
+
+						<button class="button number" id="num1">1</button>
+						<button class="button number" id="num2">2</button>
+						<button class="button number" id="num3">3</button>
+						<button class="button operation" id="plus">+</button>
+
+						<button class="button operation" id="changeSign">±</button>
+						<button class="button number" id="num0">0</button>
+						<button class="button operation" id="comma">.</button>
+						<button class="button operation" id="equal">=</button>
+					</div>
+				</div>
+				<div class="history" id="historyContainer">
+					<img src="history.svg" alt="History" id="iconHistory">
+					<h2 class="historyTitle">Historial</h2>
+					<div class="historyContent" id="historyContent">
+					</div>
+				</div>
+			</div>
+			<h3 id="helpDescription"></h3>
+		</div>
+	</body>
+</html>

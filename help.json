@@ -1,0 +1,46 @@
+{
+    "help": {
+        "plus": {
+            "description": "Suma"
+        },
+        "substract": {
+            "description": "Resta"
+        },
+        "multiply": {
+            "description": "Multiplicacion"
+        },
+        "divide": {
+            "description": "Division"
+        },
+        "power": {
+            "description": "Potencia: Segundo numero como exponente"
+        },
+        "pi": {
+            "description": "Numero Pi = 3.1415"
+        },
+        "sqrt": {
+            "description": "Raiz cuadrada del numero ingresado"
+        },
+        "log10": {
+            "description": "Logaritmo de base 10 del numero ingresado"
+        },
+        "ln": {
+            "description": "Logaritmo base e del numero ingresado"
+        },
+        "C": {
+            "description": "Elimina toda la operación"
+        },
+        "CE": {
+            "description": "Elimina solo el numero actual"
+        },
+        "changeSign": {
+            "description": "Cambia el signo del numero"
+        },
+        "comma": {
+            "description": "Comienza la parte decimal desde ese punto"
+        },
+        "equal": {
+            "description": "Resuelve la operacion"
+        }
+    }
+}
